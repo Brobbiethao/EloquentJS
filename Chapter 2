@@ -1,0 +1,68 @@
+--Code the Book
+
+
+--#1 Pyramid
+for(var str = '#'; str.length <= 7; str += '#') {
+  console.log(str)
+}
+
+--Too easy, let's go horizontal.
+let reverse = ''
+for(var yaxis = 0; yaxis <= 8; yaxis++) {
+  for(var xaxis = 0; xaxis <= 8; xaxis++) {
+    if(xaxis + yaxis % 2 === 0) {
+      reverse += '#'
+    } else {
+      reverse += ' '
+    }
+  }
+  console.log(reverse)
+}
+
+
+--#2
+for(var i = 1; i <= 100; i ++) {
+  if (i % 3 === 0 && i % 5 === 0) {
+    console.log('FizzBuzz')
+  }
+  else if(i % 3 === 0) {
+    console.log('Fizz')
+  else if (i % 5 === 0) {
+    console.log('Buzz') 
+  }
+  else {
+  console.log(i)
+  }
+}
+
+
+--Book solution which is pretty awesome
+for(var n = 1; n < 100; n++) {
+  let str = ''
+  if(n % 3 === 0) str += 'Fizz'
+  if(n % 5 === 0) str += 'Buzz'
+  console.log(str || n)
+};
+
+--I could do it better with convoluted refactored code
+ for(var n = 1; n <= 100; n++) {
+   n % 3 === 0 && n % 5 === 0 ? console.log('FizzBuzz') : n % 3 === 0 ? console.log('Fizz') : n % 5 === 0 ? console.log('Buzz') : console.log(n)
+ }
+
+--#3
+let size = 8;
+
+let board = "";
+
+for (let y = 0; y < size; y++) {
+  for (let x = 0; x < size; x++) {
+    if ((x + y) % 2 == 0) {
+      board += " ";
+    } else {
+      board += "#";
+    }
+  }
+  board += "\n";
+}
+
+console.log(board);
