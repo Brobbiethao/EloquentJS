@@ -6,19 +6,6 @@ for(var str = '#'; str.length <= 7; str += '#') {
   console.log(str)
 }
 
---Too easy, let's go horizontal.
-let reverse = ''
-for(var yaxis = 0; yaxis <= 8; yaxis++) {
-  for(var xaxis = 0; xaxis <= 8; xaxis++) {
-    if(xaxis + yaxis % 2 === 0) {
-      reverse += '#'
-    } else {
-      reverse += ' '
-    }
-  }
-  console.log(reverse)
-}
-
 
 --#2
 for(var i = 1; i <= 100; i ++) {
