@@ -1,2 +1,158 @@
 -- Let's see how long I can keep this streak going. 100 days of code? a thousand days of open source contributions?
 
+Example 1
+let listOfNumbers = [2, 3, 5, 7, 11];
+console.log(listOfNumbers[2]);
+// → 5
+console.log(listOfNumbers[0]);
+// → 2
+console.log(listOfNumbers[2 - 1]);
+// → 3
+
+console.log(listOfNumbers)
+
+
+Example 2
+// null.length
+// → TypeError: null has no properties
+let boy = {"boy": "long"};
+console.log(boy.boy.length)
+
+
+Example 3
+let doh = "Doh";
+console.log(typeof doh.toUpperCase);
+// → function
+console.log(doh.toUpperCase());
+// → DOH
+console.log(doh.toLowerCase());
+
+
+Example 4
+let sequence = [1, 2, 3];
+sequence.push(4);
+sequence.push(5);
+console.log(sequence);
+// → [1, 2, 3, 4, 5]
+console.log(sequence.pop());
+// → 5
+console.log(sequence);
+// → [1, 2, 3, 4]
+let array = []
+array.push("baby", "mother", "father")
+console.log(array)
+console.log(array[2])
+
+
+Example 5
+let day1 = {
+  squirrel: false,
+  events: ["work", "touched tree", "pizza", "running"]
+};
+console.log(day1.squirrel);
+// → false
+console.log(day1.wolf);
+// → undefined
+day1.wolf = false;
+console.log(day1.wolf);
+// → false
+
+let day2 = {
+  wolf: true,
+  events: ["work", "ate raw meat", "looked at a full moon"]
+};
+console.log(day2.wolf + ' I turned into a wolf by eating ' + day2.events[1])
+
+
+Example 6
+let anObject = {left: 1, right: 2};
+console.log(anObject.left);
+// → 1
+delete anObject.left;
+console.log(anObject.left);
+// → undefined
+console.log("left" in anObject);
+// → false
+console.log("right" in anObject);
+// → true
+
+let myAppendages = {arms: 2, legs: 2}
+console.log("arms" in myAppendages)
+
+
+Example 7
+let objectA = {a: 1, b: 2};
+Object.assign(objectA, {b: 31, c: 4});
+console.log(objectA);
+// → {a: 1, b: 3, c: 4}
+
+let objectB = {fly: false, swim: true};
+console.log(objectB);
+Object.assign(objectB, {fly: true});
+console.log(objectB)
+console.log(objectB.swim)
+
+
+let journal = [
+  {events: ["work", "touched tree", "pizza",
+            "running", "television"],
+   squirrel: false},
+  {events: ["work", "ice cream", "cauliflower",
+            "lasagna", "touched tree", "brushed teeth"],
+   squirrel: false},
+  {events: ["weekend", "cycling", "break", "peanuts",
+            "beer"],
+   squirrel: true},
+  /* and so on... */
+];
+console.log(journal[0].events + ', ' + journal[1].events)
+
+
+Example 8
+let object1 = {value: 10};
+let object2 = object1;
+let object3 = {value: 10};
+
+console.log(object1 == object2);
+// → true
+console.log(object1 == object3);
+// → false
+
+object1.value = 15;
+console.log(object2.value);
+// → 15
+console.log(object3.value);
+// → 10
+
+let object4 = {value: 200 };
+let object5 = object4
+console.log(object4.value)
+console.log(object5.value)
+delete object5.value
+console.log(object5)
+object4.value = 200
+object5 = object4
+console.log(object5.value)
+
+
+Example 9
+let score = {visitors: 0, home: 0};
+// This is okay
+score.visitors = 1;
+// This isn't allowed
+score = {visitors: 1, home: 1};
+score.home = 2;
+console.log(score.home)
+
+
+Example 10
+let journal = [];
+
+function addEntry(events, squirrel) {
+  journal.push({events, squirrel});
+}
+
+addEntry(["work", "playdough"], false);
+console.log(journal[0].squirrel)
+
+// Taking a break its 11:40, see you on the AM.
