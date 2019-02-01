@@ -156,3 +156,34 @@ addEntry(["work", "playdough"], false);
 console.log(journal[0].squirrel)
 
 // Taking a break its 11:40, see you on the AM.
+
+// After taxes for 3 people, an exam, an child's asthma attack, a child's breakdown. Here I am..
+
+let todoList = [];
+function remember(task) {
+  todoList.push(task);
+}
+function getTask() {
+  return todoList.shift();
+}
+function rememberUrgently(task) {
+  todoList.unshift(task);
+}
+remember("groceries")
+console.log(todoList[0])
+getTask()
+console.log(getTask)
+rememberUrgently("groceries")
+remember("serial(get it?)")
+console.log(todoList)
+
+
+console.log([1, 2, 3, 2, 1].indexOf(2));
+// → 1
+console.log([1, 2, 3, 2, 1].lastIndexOf(2));
+// → 3
+let string = "LA LA LAND";
+console.log(string.indexOf('L'));
+console.log(string.lastIndexOf('L'));
+
+
