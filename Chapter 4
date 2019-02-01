@@ -187,3 +187,11 @@ console.log(string.indexOf('L'));
 console.log(string.lastIndexOf('L'));
 
 
+console.log([0, 1, 2, 3, 4].slice(2, 4));
+// → [2, 3]
+console.log([0, 1, 2, 3, 4].slice(2));
+// → [2, 3, 4]
+let string = "Collecting dung is nothing.";
+console.log(string.slice(0, 2)+string.slice(11,12)+string.slice(16, 17)+string.slice(19,20)+string.slice(25,26)+' is fun!');
+            
+// getting sleep, 12:05. See you at 5am.
